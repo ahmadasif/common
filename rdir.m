@@ -3,8 +3,8 @@ function [varargout] = rdir(rootdir,varargin)
 %--------------------------------------------------------------------------
 %% Input validation
 
-% use the current directory if nothing is specified
-if ~exist('rootdir','var'),
+
+if ~exist('rootdir','var'), % use the current directory if nothing is specified
   rootdir = '*';
 end
 
@@ -194,7 +194,6 @@ if (nargin>=3 && ~isempty(varargin{2})),
     common_path = '';
   end
   
-  % 19/07/2012 : ajouter common_path en sortie optionnelle
   
 end
 
@@ -290,11 +289,11 @@ function tf = evaluate(d, expr)
 %
 
 % Get fields that can be used
-name = {d.name}'; %#ok<NASGU>
-date = {d.date}'; %#ok<NASGU>
-datenum = [d.datenum]'; %#ok<NASGU>
-bytes = [d.bytes]'; %#ok<NASGU>
-isdir = [d.isdir]'; %#ok<NASGU>
+name = {d.name}'; 
+date = {d.date}'; 
+datenum = [d.datenum]'; 
+bytes = [d.bytes]'; 
+isdir = [d.isdir]'; 
 
 tf = eval(expr); % low risk since done in a dedicated subfunction.
 

@@ -1,20 +1,4 @@
 function pathout=dropboxPath(varargin)
-%DROPBOXPATH Get path to dropbox folder of current user.
-%
-% This function returns the path to the Dropbox folder of the current user (if
-% it exists). You can add arguments in similar style to fullfile to get a path
-% within a dropbox folder:
-
-% USES:
-%    dbpath = dropboxPath
-%    dbpath = dropboxPath(filepart1,...,filepartN)
-%
-% 
-% 25/08/14 - Initial 
-% 27/08/14 - added facility to generate full path to something in a drop box
-% folder in a simialr manner to fullfile.
-%
-% Copyright (c) 2014, Chris Betters
 
 if nargin>0
     appendpath=strjoin(varargin,filesep);

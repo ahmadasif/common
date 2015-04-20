@@ -21,7 +21,7 @@ currentTime = datevec(now);
 
 formatSpec1 = '%u of %u (%3.1f%%) - ETC %02u:%02u (Avg=%3.2fs) - %s\n';
 formatSpec2 = '%u of %u (%3.1f%%) - ETC %02u:%02u (%s %u) (Avg=%3.2fs) - %s\n';
-formatSpec3 = 'ETC%02u%02u%s%u~%u-%u-%upct~avg=%ds';
+formatSpec3 = 'ETC%02u%02u%s%u~%u-%u-%upct~avg=%3.2fs';
 formatSpec4 = '\nCompleted %u at %02u:%02u on %s %u ~ elapsed time - %02u:%02u:%02u ~ avg=%3.1fs';
 if currentTime(3) == completionTime(3)
     fprintf(formatSpec1,currentIndex,finalIndex,completedPercentage,completionTime(4),completionTime(5),averageTime,currentItem);

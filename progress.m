@@ -1,6 +1,6 @@
 function startTime = progress(currentItem,currentIndex,finalIndex,beginTime);
 
-logFileDir = '/run/shm';
+logFileDir = '~';
 
 if currentIndex == 0
     delete(fullfile(logFileDir,'ETC*'))

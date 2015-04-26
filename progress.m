@@ -35,7 +35,7 @@ previousCompletedPercentage = (currentIndex - 1) / finalIndex * 100;
 if floor(completedPercentage) > floor(previousCompletedPercentage)
     delete(fullfile(logFileDir,'ETC*'))
     logFileName = fullfile(logFileDir,sprintf(formatSpec3,completionTime(4),completionTime(5),...
-            datestr(completionTime,'mmm'),completionTime(3),currentIndex,finalIndex,floor(completedPercentage+0.5),floor(averageTime+0.5)));
+            datestr(completionTime,'mmm'),completionTime(3),currentIndex,finalIndex,floor(completedPercentage+0.5),averageTime));
     logFileID = fopen(logFileName,'w');
     fclose(logFileID);   
 end
